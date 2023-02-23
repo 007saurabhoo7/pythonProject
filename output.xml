@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230222 18:38:48.275" rpa="false" schemaversion="3">
+<suite id="s1" name="TC 1" source="C:\Users\Saurabh Sharma\PycharmProjects\pythonProject\rbt\TC_1.robot">
+<test id="s1-t1" name="BlankLogin" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230222 18:38:48.496" level="INFO">Opening browser 'chrome' to base url 'https://nobelpagedev.iworklab.com/'.</msg>
+<status status="PASS" starttime="20230222 18:38:48.495" endtime="20230222 18:38:51.601"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230222 18:38:51.602" endtime="20230222 18:38:51.770"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230222 18:38:51.772" endtime="20230222 18:38:51.810"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230222 18:38:51.811" endtime="20230222 18:38:51.845"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230222 18:38:51.878" level="INFO">Element '//input[@type='email']' is displayed.</msg>
+<status status="PASS" starttime="20230222 18:38:51.846" endtime="20230222 18:38:51.878"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()='Login to NobelPage']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 18:38:51.879" level="INFO">Clicking button '//button[text()='Login to NobelPage']'.</msg>
+<status status="PASS" starttime="20230222 18:38:51.878" endtime="20230222 18:38:51.959"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 18:38:56.961" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 18:38:51.961" endtime="20230222 18:38:56.961"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230222 18:38:56.961" endtime="20230222 18:38:57.344"/>
+</kw>
+<status status="PASS" starttime="20230222 18:38:48.495" endtime="20230222 18:38:57.352"/>
+</test>
+<test id="s1-t2" name="login With wrong Email" line="36">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230222 18:38:57.354" endtime="20230222 18:38:57.372"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230222 18:38:57.372" endtime="20230222 18:38:57.398"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230222 18:38:57.434" level="INFO">Element '//input[@type='email']' is displayed.</msg>
+<status status="PASS" starttime="20230222 18:38:57.399" endtime="20230222 18:38:57.435"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>saurabh1@@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 18:38:57.436" level="INFO">Typing text 'saurabh1@@yopmail.com' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20230222 18:38:57.436" endtime="20230222 18:38:57.594"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Pass@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 18:38:57.599" level="INFO">Typing text 'Pass@123' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20230222 18:38:57.598" endtime="20230222 18:38:57.708"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()='Login to NobelPage']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 18:38:57.712" level="INFO">Clicking button '//button[text()='Login to NobelPage']'.</msg>
+<status status="PASS" starttime="20230222 18:38:57.711" endtime="20230222 18:38:57.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 18:39:02.777" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 18:38:57.776" endtime="20230222 18:39:02.777"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230222 18:39:02.777" endtime="20230222 18:39:03.024"/>
+</kw>
+<status status="PASS" starttime="20230222 18:38:57.354" endtime="20230222 18:39:03.025"/>
+</test>
+<test id="s1-t3" name="login with wrong password" line="48">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230222 18:39:03.028" endtime="20230222 18:39:03.077"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230222 18:39:03.078" endtime="20230222 18:39:03.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230222 18:39:03.162" level="INFO">Element '//input[@type='email']' is displayed.</msg>
+<status status="PASS" starttime="20230222 18:39:03.143" endtime="20230222 18:39:03.162"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>saurabh1@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 18:39:03.163" level="INFO">Typing text 'saurabh1@yopmail.com' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20230222 18:39:03.162" endtime="20230222 18:39:03.299"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Pass@12300000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 18:39:03.300" level="INFO">Typing text 'Pass@12300000' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20230222 18:39:03.299" endtime="20230222 18:39:03.438"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()='Login to NobelPage']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 18:39:03.440" level="INFO">Clicking button '//button[text()='Login to NobelPage']'.</msg>
+<status status="PASS" starttime="20230222 18:39:03.439" endtime="20230222 18:39:03.514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//label[text()='The email and password combination you entered is not correct. Please try again.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 18:39:03.515" endtime="20230222 18:39:03.758"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<var>${combinationPrompt}</var>
+<arg>//label[text()='The email and password combination you entered is not correct. Please try again.']</arg>
+<arg>The email and password combination you entered is not correct. Please try again.</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230222 18:39:03.771" level="INFO">Current page contains element '//label[text()='The email and password combination you entered is not correct. Please try again.']'.</msg>
+<msg timestamp="20230222 18:39:03.771" level="INFO">${combinationPrompt} = None</msg>
+<status status="PASS" starttime="20230222 18:39:03.758" endtime="20230222 18:39:03.772"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 18:39:04.773" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230222 18:39:03.772" endtime="20230222 18:39:04.773"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>The email and password combination you entered is not correct. Please try again.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230222 18:39:04.773" endtime="20230222 18:39:04.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 18:39:09.774" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 18:39:04.774" endtime="20230222 18:39:09.774"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230222 18:39:09.775" endtime="20230222 18:39:10.012"/>
+</kw>
+<status status="PASS" starttime="20230222 18:39:03.028" endtime="20230222 18:39:10.015"/>
+</test>
+<status status="PASS" starttime="20230222 18:38:48.276" endtime="20230222 18:39:10.016"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TC 1">TC 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
